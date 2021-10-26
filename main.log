@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.9.25)  26 OCT 2021 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.9.25)  26 OCT 2021 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -920,54 +920,44 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 316
-.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
+
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 316
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
+
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-Non-PDF special ignored!
-<special> header=pstricks.pro
-Non-PDF special ignored!
-<special> header=pst-algparser.pro
-Non-PDF special ignored!
-<special> header=pst-tools.pro
-Non-PDF special ignored!
-<special> header=pst-dots.pro
+)
 
-Non-PDF special ignored!
-<special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
-Non-PDF special ignored!
-<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-Non-PDF special ignored!
-<special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./main.aux) ) 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 
+      
+? x
+ 
 Here is how much of TeX's memory you used:
- 24296 strings out of 478599
- 491381 string characters out of 5854100
- 760269 words of memory out of 5000000
- 41725 multiletter control sequences out of 15000+600000
- 414465 words of font info for 65 fonts, out of 8000000 for 9000
+ 24212 strings out of 478599
+ 489571 string characters out of 5854100
+ 755269 words of memory out of 5000000
+ 41645 multiletter control sequences out of 15000+600000
+ 415114 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,7n,95p,426b,923s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/mnsymbol/MnSy
-mbolC.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/mnsymbol/MnSym
-bol12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on main.pdf (1 page, 68575 bytes).
+ 85i,7n,95p,426b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
+
+pdfTeX warning: pdflatex: dangling objects discarded, no output file produced.
+
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 9 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
