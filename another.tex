@@ -1,0 +1,39 @@
+% TeX it with pdflatex -shell-escape filename
+% filename.tex
+\documentclass{article}
+
+\usepackage{filecontents}
+
+%====== begin file contents ======
+\begin{filecontents*}{another-out01.tex}
+\documentclass[border=12pt,pstricks]{standalone}
+\usepackage{pstricks}
+\begin{document}
+\begin{pspicture}[showgrid](4,4)
+    \pscircle*[linecolor=red](2,2){2}
+\end{pspicture}
+\end{document}
+\end{filecontents*}
+%====== end file contents ======
+
+
+\usepackage{graphicx}
+\IfFileExists{another-out01.pdf}
+{% if exist do nothing
+ % file age should be taken under consideration but it is ignored for simplicity!
+}
+{% if not exist do the following
+  \immediate\write18{latex circle && dvips circle && ps2pdf -dNOSAFER -dAutoRotatePages=/None circle.ps}%
+}
+\begin{document}
+
+
+\begin{figure}
+\centering
+\includegraphics[scale=2]{another-out01}
+\caption{Red Circle}
+\label{fig:RedCircle}
+\end{figure}
+
+
+\end{document}
