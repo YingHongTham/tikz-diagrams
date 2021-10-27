@@ -388,6 +388,25 @@ color=transparent!10]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+graphic 14
+\begin{tikzpicture}
+%%loop
+\draw[regular] (0.6,0) -- (1.4,0)
+	.. controls +(0:0.5cm) and +(0:0.5cm) .. (1.4,0.5)
+	-- (0.6,0.5)
+	.. controls +(180:0.5cm) and +(180:0.5cm) .. (0.6,0);
+\node at (1.2,0.65) {\tiny $\Omega$};
+%%gamma loop
+\node[dotnode] (ga) at (1,-0.5) {};
+\node at (0.9,-0.7) {\tiny $\gamma$};
+\draw[overline,regular] (ga)
+	.. controls +(120:0.9cm) and +(120:0.5cm) .. (1.2,0)
+	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
+\node at (1.5,-0.8) {\tiny $\Omega$};
+%%gamma through line
+\draw[overline,->] (0,-0.5) -- (ga) -- (2,-0.5);
+\draw[overline,regular] (1,0) -- (1.4,0);
+\end{tikzpicture}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
