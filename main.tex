@@ -88,6 +88,9 @@ block/.style={rectangle, rounded corners, text centered, draw=black, align=cente
 \tikzfading[name=fade inside, inner color=transparent!80, outer
 color=transparent!10]
 
+\newcommand{\smallerer}{\footnotesize}
+\newcommand{\VV}{\mathbf{V}}
+
 
 \begin{document}
 
@@ -310,42 +313,52 @@ color=transparent!10]
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%graphic 08
-%\begin{tikzpicture}
-%%%left right column
-%\node (Y) at (0,0) {$I_i$};
-%\node (X) at (0,1.6) {$X$};
-%\node at (0,0.8) {$\boxtimes$};
-%\node (Y2) at (5,0) {$I_i$};
-%\node (X2) at (5,1.6) {$X$};
-%\node at (5,0.8) {$\boxtimes$};
-%%%middle left column
-%\node[emptynode] (y) at (1.7,-0.6) {};
-%\node[emptynode] (i8) at (1.7,0) {};
-%\node[emptynode] (i) at (1.7,0.6) {};
-%%%middle right column
-%\node[emptynode] (y2) at (3.3,-0.6) {};
-%\node[emptynode] (i82) at (3.3,0) {};
-%\node[emptynode] (i2) at (3.3,0.6) {};
-%%%close loop
-%\draw (i) to[out=180,in=180] (i8);
-%\draw (i2) to[out=0,in=0] (i82);
-%\node at (2.2,1) {\tiny $\Omega$};
-%%%lines
-%\draw[->] (Y) to[out=0,in=180] (y) -- (y2) to[out=0,in=180] (Y2);
-%\draw (i8) -- (i82);
-%\draw[->] (X) -- (X2)
-%	node[pos=0.5,above] {$\alpha_i^k \circ \alpha_{i,k}$};
-%\draw[midarrow=0.9] (i) -- (i2);
-%\node at (3.2,0.8) {\tiny $i$};
-%\draw[overline] (2.2,0.3)
-%	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
-%	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
-%\draw[overline] (2.5,0.6) -- (3,0.6);
-%\draw[overline] (2.5,0) -- (3,0);
-%\end{tikzpicture}
-%
-%
+graphic 08
+\begin{tikzpicture}
+%%left right column
+\node (Y) at (0,0) {$Y$};
+\node (X) at (0,1.6) {$X$};
+\node at (0,0.8) {$\boxtimes$};
+\node (Y2) at (5,0) {$Y$};
+\node (X2) at (5,1.6) {$X$};
+\node at (5,0.8) {$\boxtimes$};
+%%dotnodes
+\node[dotnode] (coev) at (1.3,0.3) {};
+	\node at (0.9,0.3) {\tiny coev};
+\node[emptynode] (ev) at (3.7,0.3) {};
+\node[dotnode] at (1.5,1.6) {};
+	\node at (1.5,1.9) {\smallerer $\alpha_{i,k}$};
+\node[dotnode] at (1.7,0) {};
+	\node at (1.7,-0.25) {\smallerer $\alpha_i^k$};
+\node[dotnode] at (3.5,1.6) {};
+	\node at (3.5,2.0) {\smallerer $\alpha_i^l$};
+\node[dotnode] at (3.3,0) {};
+	\node at (3.3,-0.25) {\smallerer $\alpha_{i,l}$};
+%%middle left column
+\node[emptynode] (y) at (1.7,-0.6) {};
+\node[emptynode] (i8) at (1.7,0) {};
+\node[emptynode] (i) at (1.7,0.6) {};
+%%middle right column
+\node[emptynode] (y2) at (3.3,-0.6) {};
+\node[emptynode] (i82) at (3.3,0) {};
+\node[emptynode] (i2) at (3.3,0.6) {};
+%%stuff through Omega loop
+\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
+	\draw (i2) to[out=0,in=90] (ev) to[out=-90,in=0] (i82);
+\node at (2.2,1) {\tiny $\Omega$};
+%%lines
+\draw[->] (Y) to[out=0,in=180] (y) -- (y2) to[out=0,in=180] (Y2);
+\draw (i8) -- (i82);
+\draw[->] (X) -- (X2);
+\draw[midarrow=0.9] (i) -- (i2);
+\node at (3.2,0.8) {\tiny $i$};
+\draw[overline] (2.2,0.3)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
+\draw[overline] (2.5,0.6) -- (3,0.6);
+\draw[overline] (2.5,0) -- (3,0);
+\end{tikzpicture}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %graphic 12
 %\begin{tikzpicture}
@@ -388,188 +401,231 @@ color=transparent!10]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-graphic 14
-\begin{tikzpicture}
-%%loop
-\draw[regular] (0.6,0) -- (1.4,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (1.4,0.5)
-	-- (0.6,0.5)
-	.. controls +(180:0.5cm) and +(180:0.5cm) .. (0.6,0);
-\node at (1.2,0.65) {\tiny $\Omega$};
-%%gamma loop
-\node[dotnode] (ga) at (1,-0.5) {};
-\node at (0.9,-0.7) {\tiny $\gamma$};
-\draw[overline,regular] (ga)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (1.2,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
-\node at (1.5,-0.8) {\tiny $\Omega$};
-%%gamma through line
-\draw[overline,->] (0,-0.5) -- (ga) -- (2,-0.5);
-\draw[overline,regular] (1,0) -- (1.4,0);
-\end{tikzpicture}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-graphic 15
-\begin{tikzpicture}
-\begin{scope}[shift={(0,0)}]
-%%half loop
-\draw (0,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
-\draw (3,0) -- (2.2,0)
-	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3,0.5);
-%%gamma loops
-\node[dotnode] (ga) at (0.5,-0.5) {};
-\node[dotnode] (ga2) at (2.3,-0.5) {};
-\node at (0.4,-0.7) {\tiny $\gamma$};
-\node at (2.2,-0.7) {\tiny $\gamma$};
-\draw[overline] (ga)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (0.8,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
-\draw[overline] (ga2)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
-%%gamma through line
-\draw[overline,->] (0,-0.5) -- (ga) -- (ga2) -- (3,-0.5);
-%%overline for half loop
-\draw[overline] (0.5,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
-\draw[overline] (2.4,0) -- (3,0);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%
-\node at (4,0) {$=$};
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(5,0)}]
-%%half loop
-\draw (0,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
-\draw (3,0) -- (2.2,0)
-	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3,0.5);
-%%gamma loops
+%graphic 14
+%\begin{tikzpicture}
+%%%loop
+%\draw[regular] (0.6,0) -- (1.4,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (1.4,0.5)
+%	-- (0.6,0.5)
+%	.. controls +(180:0.5cm) and +(180:0.5cm) .. (0.6,0);
+%\node at (1.2,0.65) {\tiny $\Omega$};
+%%%gamma loop
+%\node[dotnode] (ga) at (1,-0.5) {};
+%\node at (0.9,-0.7) {\tiny $\gamma$};
+%\draw[overline,regular] (ga)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (1.2,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
+%\node at (1.5,-0.8) {\tiny $\Omega$};
+%%%gamma through line
+%\draw[overline,->] (0,-0.5) -- (ga) -- (2,-0.5);
+%\draw[overline,regular] (1,0) -- (1.4,0);
+%\end{tikzpicture}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%graphic 15
+%\begin{tikzpicture}
+%\begin{scope}[shift={(0,0)}]
+%%%half loop
+%\draw (0,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
+%\draw (3,0) -- (2.2,0)
+%	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3,0.5);
+%%%gamma loops
 %\node[dotnode] (ga) at (0.5,-0.5) {};
-\node[dotnode] (ga2) at (2.3,-0.5) {};
+%\node[dotnode] (ga2) at (2.3,-0.5) {};
 %\node at (0.4,-0.7) {\tiny $\gamma$};
 %\node at (2.2,-0.7) {\tiny $\gamma$};
 %\draw[overline] (ga)
 %	.. controls +(120:0.9cm) and +(120:0.5cm) .. (0.8,0)
 %	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
-\draw[overline] (ga2)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
-%%gamma loop merged
-\node[dotnode] (a1) at (2.22,-0.35) {};
-\node[dotnode] (a2) at (2.4,-0.65) {};
-\node[emptynode] (x) at (0.4,-0.3) {};
-\node[emptynode] (y) at (0.6,-0.7) {};
-\draw[overline] (x)
-	.. controls +(120:0.8cm) and +(120:0.5cm) .. (0.8,0)
-	.. controls +(-60:0.9cm) and +(-60:0.2cm) .. (y);
-\draw[overline] (x)
-	.. controls +(-60:0.1cm) and +(180:1.5cm) .. (a1);
-\draw[overline] (y)
-	.. controls +(120:0.1cm) and +(180:1.5cm) .. (a2);
-\draw (ga2) -- (a2);
-%%gamma through line
-\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
-%%overline for half loop
-\draw[overline] (0.5,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
-\draw[overline] (2.4,0) -- (3,0);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\node at (9,0) {$=$};
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(10,0)}]
-%%half loop
-\draw (0,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
-\draw (3.3,0) -- (2.2,0)
-	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3.3,0.5);
-%%gamma loops
-%\node[dotnode] (ga) at (0.5,-0.5) {};
-\node[dotnode] (ga2) at (2.5,-0.5) {};
-%\node at (0.4,-0.7) {\tiny $\gamma$};
-%\node at (2.2,-0.7) {\tiny $\gamma$};
-%\draw[overline] (ga)
-%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (0.8,0)
-%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
-%%gamma loop merged
-\node[emptynode] (a1) at (2,-0.35) {};
-\node[emptynode] (a2) at (2.2,-0.65) {};
-\node[emptynode] (x) at (0.4,-0.3) {};
-\node[emptynode] (y) at (0.6,-0.7) {};
-\node[emptynode] (x2) at (2.2,-0.3) {};
-\node[emptynode] (y2) at (2.4,-0.7) {};
-%half loop on the left
-\draw[overline] (x)
-	.. controls +(120:0.8cm) and +(120:0.5cm) .. (0.8,0)
-	.. controls +(-60:0.9cm) and +(-60:0.2cm) .. (y);
-%rest of loop
-\draw[overline] (x)
-	.. controls +(-60:0.1cm) and +(180:1.5cm) .. (a1)
-	.. controls +(0:0.1cm) and +(-60:0.05cm) .. (x2)
-	.. controls +(120:0.6cm) and +(120:0.5cm) .. (2.6,0)
-	.. controls +(-60:0.9cm) and +(-60:0.15cm) .. (y2)
-	.. controls +(120:0.05cm) and +(0:0.1cm) .. (a2);
-\draw[overline] (y)
-	.. controls +(120:0.1cm) and +(180:1.5cm) .. (a2);
-%%right gamma loop
-\draw[overline] (ga2)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.8,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%\draw[overline] (ga2)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%%%gamma through line
+%\draw[overline,->] (0,-0.5) -- (ga) -- (ga2) -- (3,-0.5);
+%%%overline for half loop
+%\draw[overline] (0.5,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
+%\draw[overline] (2.4,0) -- (3,0);
+%\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\node at (4,0) {$=$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{scope}[shift={(5,0)}]
+%%%half loop
+%\draw (0,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
+%\draw (3,0) -- (2.2,0)
+%	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3,0.5);
+%%%gamma loops
+%%\node[dotnode] (ga) at (0.5,-0.5) {};
+%\node[dotnode] (ga2) at (2.3,-0.5) {};
+%%\node at (0.4,-0.7) {\tiny $\gamma$};
+%%\node at (2.2,-0.7) {\tiny $\gamma$};
+%%\draw[overline] (ga)
+%%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (0.8,0)
+%%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
+%\draw[overline] (ga2)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%%%gamma loop merged
+%\node[dotnode] (a1) at (2.22,-0.35) {};
+%\node[dotnode] (a2) at (2.4,-0.65) {};
+%\node[emptynode] (x) at (0.4,-0.3) {};
+%\node[emptynode] (y) at (0.6,-0.7) {};
+%\draw[overline] (x)
+%	.. controls +(120:0.8cm) and +(120:0.5cm) .. (0.8,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.2cm) .. (y);
+%\draw[overline] (x)
+%	.. controls +(-60:0.1cm) and +(180:1.5cm) .. (a1);
+%\draw[overline] (y)
+%	.. controls +(120:0.1cm) and +(180:1.5cm) .. (a2);
 %\draw (ga2) -- (a2);
-%%gamma through line
-\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3.3,-0.5);
-%%overline for half loop
-\draw[overline] (0.5,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
-\draw[overline] (2.4,0) -- (3.3,0);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%
-\node at (1.5,-2) {$=$};
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(2.5,-2)}]
-%%cross loop, bottom part
-\draw (1,0.25)
-	.. controls +(-90:0.2cm) and +(-90:0.2cm) .. (1.8,0.25);
-%%half loops
-\draw[thin_overline={1.5}] (0,0) -- (0.8,0)
-	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
-\draw[thin_overline={1.5}] (3,0) -- (2,0)
-	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2,0.5) -- (3,0.5);
-%%gamma loops
-%\node[dotnode] (ga) at (0.5,-0.5) {};
-\node[dotnode] (ga2) at (2.3,-0.5) {};
-\draw[overline] (ga2)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
-%%gamma loop merged
-%%gamma through line
-\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
-%%overline for half loop
-\draw[overline] (2.4,0) -- (3,0);
-%%overline for cross loop
-\draw[thin_overline={1.5}] (1,0.25)
-	.. controls +(90:0.2cm) and +(90:0.2cm) .. (1.8,0.25);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%
-\node at (6.5,-2) {$=$};
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(7.5,-2)}]
-\draw (0,0) -- (3,0);
-\draw (0,0.5) -- (3,0.5);
-%%gamma loops
-\node[dotnode] (ga2) at (2,-0.5) {};
-\draw[overline] (ga2)
-	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.3,0)
-	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
-%%gamma loop merged
-%%gamma through line
-\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
-\draw[overline] (2,0) -- (3,0);
-\end{scope}
-\end{tikzpicture}
+%%%gamma through line
+%\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
+%%%overline for half loop
+%\draw[overline] (0.5,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
+%\draw[overline] (2.4,0) -- (3,0);
+%\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\node at (9,0) {$=$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{scope}[shift={(10,0)}]
+%%%half loop
+%\draw (0,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
+%\draw (3.3,0) -- (2.2,0)
+%	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2.2,0.5) -- (3.3,0.5);
+%%%gamma loops
+%%\node[dotnode] (ga) at (0.5,-0.5) {};
+%\node[dotnode] (ga2) at (2.5,-0.5) {};
+%%\node at (0.4,-0.7) {\tiny $\gamma$};
+%%\node at (2.2,-0.7) {\tiny $\gamma$};
+%%\draw[overline] (ga)
+%%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (0.8,0)
+%%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga);
+%%%gamma loop merged
+%\node[emptynode] (a1) at (2,-0.35) {};
+%\node[emptynode] (a2) at (2.2,-0.65) {};
+%\node[emptynode] (x) at (0.4,-0.3) {};
+%\node[emptynode] (y) at (0.6,-0.7) {};
+%\node[emptynode] (x2) at (2.2,-0.3) {};
+%\node[emptynode] (y2) at (2.4,-0.7) {};
+%%half loop on the left
+%\draw[overline] (x)
+%	.. controls +(120:0.8cm) and +(120:0.5cm) .. (0.8,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.2cm) .. (y);
+%%rest of loop
+%\draw[overline] (x)
+%	.. controls +(-60:0.1cm) and +(180:1.5cm) .. (a1)
+%	.. controls +(0:0.1cm) and +(-60:0.05cm) .. (x2)
+%	.. controls +(120:0.6cm) and +(120:0.5cm) .. (2.6,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.15cm) .. (y2)
+%	.. controls +(120:0.05cm) and +(0:0.1cm) .. (a2);
+%\draw[overline] (y)
+%	.. controls +(120:0.1cm) and +(180:1.5cm) .. (a2);
+%%%right gamma loop
+%\draw[overline] (ga2)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.8,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%%\draw (ga2) -- (a2);
+%%%gamma through line
+%\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3.3,-0.5);
+%%%overline for half loop
+%\draw[overline] (0.5,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5);
+%\draw[overline] (2.4,0) -- (3.3,0);
+%\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\node at (1.5,-2) {$=$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{scope}[shift={(2.5,-2)}]
+%%%cross loop, bottom part
+%\draw (1,0.25)
+%	.. controls +(-90:0.2cm) and +(-90:0.2cm) .. (1.8,0.25);
+%%%half loops
+%\draw[thin_overline={1.5}] (0,0) -- (0.8,0)
+%	.. controls +(0:0.5cm) and +(0:0.5cm) .. (0.8,0.5) -- (0,0.5);
+%\draw[thin_overline={1.5}] (3,0) -- (2,0)
+%	.. controls +(180:0.5cm) and +(180:0.5cm) .. (2,0.5) -- (3,0.5);
+%%%gamma loops
+%%\node[dotnode] (ga) at (0.5,-0.5) {};
+%\node[dotnode] (ga2) at (2.3,-0.5) {};
+%\draw[overline] (ga2)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.6,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%%%gamma loop merged
+%%%gamma through line
+%\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
+%%%overline for half loop
+%\draw[overline] (2.4,0) -- (3,0);
+%%%overline for cross loop
+%\draw[thin_overline={1.5}] (1,0.25)
+%	.. controls +(90:0.2cm) and +(90:0.2cm) .. (1.8,0.25);
+%\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\node at (6.5,-2) {$=$};
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{scope}[shift={(7.5,-2)}]
+%\draw (0,0) -- (3,0);
+%\draw (0,0.5) -- (3,0.5);
+%%%gamma loops
+%\node[dotnode] (ga2) at (2,-0.5) {};
+%\draw[overline] (ga2)
+%	.. controls +(120:0.9cm) and +(120:0.5cm) .. (2.3,0)
+%	.. controls +(-60:0.9cm) and +(-60:0.5cm) .. (ga2);
+%%%gamma loop merged
+%%%gamma through line
+%\draw[thin_overline={1.5},->] (0,-0.5) -- (ga2) -- (3,-0.5);
+%\draw[overline] (2,0) -- (3,0);
+%\end{scope}
+%\end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+graphic 16
+\begin{tikzpicture}
+%%left right column
+\node (X) at (0,1.2) {$X$};
+\node (Y) at (0,0) {$Y$};
+\node at (0,0.6) {$\otimes$};
+\node (X2) at (5,1.2) {$X$};
+\node (Y2) at (5,0) {$Y$};
+\node at (5,0.6) {$\otimes$};
+%%dot nodes
+\node[dotnode] (a1) at (1.8,0) {};
+\node at (1.8,-0.2) {\tiny $\alpha_i^k$};
+\node[dotnode] (a2) at (1.8,1.2) {};
+\node at (1.8,1.4) {\tiny $\alpha_{i,k}$};
+\node[dotnode] (coev) at (1.3,0.3) {};
+\node at (1.0,0.3) {\tiny coev};
+%%middle left column
+\node[emptynode] (x) at (1.7,-0.6) {};
+\node[emptynode] (i8) at (1.7,0) {};
+\node[emptynode] (i) at (1.7,0.6) {};
+%%middle right column
+\node[emptynode] (x2) at (3.3,-0.6) {};
+\node[emptynode] (i82) at (3.3,0) {};
+\node[emptynode] (i2) at (3.2,0.6) {};
+%%stuff through loop
+	\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
+\node at (2.15,0.9) {\tiny $\Omega$};
+\draw[->] (Y) to[out=0,in=180] (x) -- (x2) to[out=0,in=180] (Y2);
+\draw (i8) -- (i82);
+\draw (X) -- (3.2,1.2)
+	to[out=0,in=90] (3.5,0.9) to[out=-90,in=0] (i2);
+\draw[->] (i82) to[out=0,in=180] (X2);
+%	node[pos=0.5,above] {$\alpha_i^k \circ \alpha_{i,k}$};
+\draw[midarrow=0.9] (i) -- (i2);
+\node at (3,1.4) {\tiny $i^*$};
+\draw[overline] (2.2,0.3)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
+\draw[overline] (2.5,0.6) -- (3,0.6);
+\draw[overline] (2.5,0) -- (3,0);
+\end{tikzpicture}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
