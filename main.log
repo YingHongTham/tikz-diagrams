@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.9.25)  1 DEC 2021 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.9.25)  3 DEC 2021 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -920,13 +920,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 319
+LaTeX Font Info:    Trying to load font information for U+msa on input line 631
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 319
+LaTeX Font Info:    Trying to load font information for U+msb on input line 631
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -950,27 +950,26 @@ Non-PDF special ignored!
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 24379 strings out of 478599
- 492567 string characters out of 5854100
- 775276 words of memory out of 5000000
- 41796 multiletter control sequences out of 15000+600000
- 418998 words of font info for 81 fonts, out of 8000000 for 9000
+ 24364 strings out of 478599
+ 491354 string characters out of 5854100
+ 769278 words of memory out of 5000000
+ 41793 multiletter control sequences out of 15000+600000
+ 414465 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,7n,95p,426b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,7n,95p,426b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/mnsymbol/MnSy
-mbolC.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/mnsymbol/MnSym
-bol12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mnsymbol/MnSym
-bol5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on main.pdf (1 page, 93433 bytes).
+mbolA.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbol
+C.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.en
+c}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on main.pdf (1 page, 69410 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

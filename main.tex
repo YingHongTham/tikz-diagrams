@@ -313,52 +313,52 @@ color=transparent!10]
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-graphic 08
-\begin{tikzpicture}
-%%left right column
-\node (Y) at (0,0) {$Y$};
-\node (X) at (0,1.6) {$X$};
-\node at (0,0.8) {$\boxtimes$};
-\node (Y2) at (5,0) {$Y$};
-\node (X2) at (5,1.6) {$X$};
-\node at (5,0.8) {$\boxtimes$};
-%%dotnodes
-\node[dotnode] (coev) at (1.3,0.3) {};
-	\node at (0.9,0.3) {\tiny coev};
-\node[emptynode] (ev) at (3.7,0.3) {};
-\node[dotnode] at (1.5,1.6) {};
-	\node at (1.5,1.9) {\smallerer $\alpha_{i,k}$};
-\node[dotnode] at (1.7,0) {};
-	\node at (1.7,-0.25) {\smallerer $\alpha_i^k$};
-\node[dotnode] at (3.5,1.6) {};
-	\node at (3.5,2.0) {\smallerer $\alpha_i^l$};
-\node[dotnode] at (3.3,0) {};
-	\node at (3.3,-0.25) {\smallerer $\alpha_{i,l}$};
-%%middle left column
-\node[emptynode] (y) at (1.7,-0.6) {};
-\node[emptynode] (i8) at (1.7,0) {};
-\node[emptynode] (i) at (1.7,0.6) {};
-%%middle right column
-\node[emptynode] (y2) at (3.3,-0.6) {};
-\node[emptynode] (i82) at (3.3,0) {};
-\node[emptynode] (i2) at (3.3,0.6) {};
-%%stuff through Omega loop
-\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
-	\draw (i2) to[out=0,in=90] (ev) to[out=-90,in=0] (i82);
-\node at (2.2,1) {\tiny $\Omega$};
-%%lines
-\draw[->] (Y) to[out=0,in=180] (y) -- (y2) to[out=0,in=180] (Y2);
-\draw (i8) -- (i82);
-\draw[->] (X) -- (X2);
-\draw[midarrow=0.9] (i) -- (i2);
-\node at (3.2,0.8) {\tiny $i$};
-\draw[overline] (2.2,0.3)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
-\draw[overline] (2.5,0.6) -- (3,0.6);
-\draw[overline] (2.5,0) -- (3,0);
-\end{tikzpicture}
-
+%graphic 08
+%\begin{tikzpicture}
+%%%left right column
+%\node (Y) at (0,0) {$Y$};
+%\node (X) at (0,1.6) {$X$};
+%\node at (0,0.8) {$\boxtimes$};
+%\node (Y2) at (5,0) {$Y$};
+%\node (X2) at (5,1.6) {$X$};
+%\node at (5,0.8) {$\boxtimes$};
+%%%dotnodes
+%\node[dotnode] (coev) at (1.3,0.3) {};
+%	\node at (0.9,0.3) {\tiny coev};
+%\node[emptynode] (ev) at (3.7,0.3) {};
+%\node[dotnode] at (1.5,1.6) {};
+%	\node at (1.5,1.9) {\smallerer $\alpha_{i,k}$};
+%\node[dotnode] at (1.7,0) {};
+%	\node at (1.7,-0.25) {\smallerer $\alpha_i^k$};
+%\node[dotnode] at (3.5,1.6) {};
+%	\node at (3.5,2.0) {\smallerer $\alpha_i^l$};
+%\node[dotnode] at (3.3,0) {};
+%	\node at (3.3,-0.25) {\smallerer $\alpha_{i,l}$};
+%%%middle left column
+%\node[emptynode] (y) at (1.7,-0.6) {};
+%\node[emptynode] (i8) at (1.7,0) {};
+%\node[emptynode] (i) at (1.7,0.6) {};
+%%%middle right column
+%\node[emptynode] (y2) at (3.3,-0.6) {};
+%\node[emptynode] (i82) at (3.3,0) {};
+%\node[emptynode] (i2) at (3.3,0.6) {};
+%%%stuff through Omega loop
+%\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
+%	\draw (i2) to[out=0,in=90] (ev) to[out=-90,in=0] (i82);
+%\node at (2.2,1) {\tiny $\Omega$};
+%%%lines
+%\draw[->] (Y) to[out=0,in=180] (y) -- (y2) to[out=0,in=180] (Y2);
+%\draw (i8) -- (i82);
+%\draw[->] (X) -- (X2);
+%\draw[midarrow=0.9] (i) -- (i2);
+%\node at (3.2,0.8) {\tiny $i$};
+%\draw[overline] (2.2,0.3)
+%	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
+%	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
+%\draw[overline] (2.5,0.6) -- (3,0.6);
+%\draw[overline] (2.5,0) -- (3,0);
+%\end{tikzpicture}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %graphic 12
 %\begin{tikzpicture}
@@ -583,50 +583,116 @@ graphic 08
 %\end{scope}
 %\end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-graphic 16
-\begin{tikzpicture}
-%%left right column
-\node (X) at (0,1.2) {$X$};
-\node (Y) at (0,0) {$Y$};
-\node at (0,0.6) {$\otimes$};
-\node (X2) at (5,1.2) {$X$};
-\node (Y2) at (5,0) {$Y$};
-\node at (5,0.6) {$\otimes$};
-%%dot nodes
-\node[dotnode] (a1) at (1.8,0) {};
-\node at (1.8,-0.2) {\tiny $\alpha_i^k$};
-\node[dotnode] (a2) at (1.8,1.2) {};
-\node at (1.8,1.4) {\tiny $\alpha_{i,k}$};
-\node[dotnode] (coev) at (1.3,0.3) {};
-\node at (1.0,0.3) {\tiny coev};
-%%middle left column
-\node[emptynode] (x) at (1.7,-0.6) {};
-\node[emptynode] (i8) at (1.7,0) {};
-\node[emptynode] (i) at (1.7,0.6) {};
-%%middle right column
-\node[emptynode] (x2) at (3.3,-0.6) {};
-\node[emptynode] (i82) at (3.3,0) {};
-\node[emptynode] (i2) at (3.2,0.6) {};
-%%stuff through loop
-	\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
-\node at (2.15,0.9) {\tiny $\Omega$};
-\draw[->] (Y) to[out=0,in=180] (x) -- (x2) to[out=0,in=180] (Y2);
-\draw (i8) -- (i82);
-\draw (X) -- (3.2,1.2)
-	to[out=0,in=90] (3.5,0.9) to[out=-90,in=0] (i2);
-\draw[->] (i82) to[out=0,in=180] (X2);
-%	node[pos=0.5,above] {$\alpha_i^k \circ \alpha_{i,k}$};
-\draw[midarrow=0.9] (i) -- (i2);
-\node at (3,1.4) {\tiny $i^*$};
-\draw[overline] (2.2,0.3)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
-\draw[overline] (2.5,0.6) -- (3,0.6);
-\draw[overline] (2.5,0) -- (3,0);
-\end{tikzpicture}
-
-
+%graphic 16
+%\begin{tikzpicture}
+%%%left right column
+%\node (X) at (0,1.2) {$X$};
+%\node (Y) at (0,0) {$Y$};
+%\node at (0,0.6) {$\otimes$};
+%\node (X2) at (5,1.2) {$X$};
+%\node (Y2) at (5,0) {$Y$};
+%\node at (5,0.6) {$\otimes$};
+%%%dot nodes
+%\node[dotnode] (a1) at (1.8,0) {};
+%\node at (1.8,-0.2) {\tiny $\alpha_i^k$};
+%\node[dotnode] (a2) at (1.8,1.2) {};
+%\node at (1.8,1.4) {\tiny $\alpha_{i,k}$};
+%\node[dotnode] (coev) at (1.3,0.3) {};
+%\node at (1.0,0.3) {\tiny coev};
+%%%middle left column
+%\node[emptynode] (x) at (1.7,-0.6) {};
+%\node[emptynode] (i8) at (1.7,0) {};
+%\node[emptynode] (i) at (1.7,0.6) {};
+%%%middle right column
+%\node[emptynode] (x2) at (3.3,-0.6) {};
+%\node[emptynode] (i82) at (3.3,0) {};
+%\node[emptynode] (i2) at (3.2,0.6) {};
+%%%stuff through loop
+%	\draw (i) to[out=180,in=90] (coev) to[out=-90,in=180] (i8);
+%\node at (2.15,0.9) {\tiny $\Omega$};
+%\draw[->] (Y) to[out=0,in=180] (x) -- (x2) to[out=0,in=180] (Y2);
+%\draw (i8) -- (i82);
+%\draw (X) -- (3.2,1.2)
+%	to[out=0,in=90] (3.5,0.9) to[out=-90,in=0] (i2);
+%\draw[->] (i82) to[out=0,in=180] (X2);
+%%	node[pos=0.5,above] {$\alpha_i^k \circ \alpha_{i,k}$};
+%\draw[midarrow=0.9] (i) -- (i2);
+%\node at (3,1.4) {\tiny $i^*$};
+%\draw[overline] (2.2,0.3)
+%	.. controls +(90:0.8cm) and +(90:0.8cm) .. (2.7,0.3)
+%	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (2.2,0.3);
+%\draw[overline] (2.5,0.6) -- (3,0.6);
+%\draw[overline] (2.5,0) -- (3,0);
+%\end{tikzpicture}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+graphic 17
+\begin{tikzpicture}
+\node (I) at (0,0.4) {$I_{j}$};
+\node at (0.5,0.4) {$\subseteq$};
+\node (W) at (1,0) {$W$};
+\node at (1,0.4) {$\otimes$};
+\node (j) at (1,0.8) {$j$};
+\node at (0,1) {$\boxtimes$};
+\node (js) at (0,1.6) {$j^*$};
+%%stuff around the coev
+\node[emptynode] (m1) at (2,-0.2) {};
+\node[emptynode] (m2) at (2,0.2) {};
+\node[emptynode] (m25) at (1.6,0.4) {};
+\node[emptynode] (m3) at (2,0.6) {};
+\node[emptynode] (m4) at (2,1.0) {};
+%%the free loop, underneath
+\node[emptynode] (l1) at (2,0.4) {};
+\node[emptynode] (l2) at (2,1.2) {};
+\draw (l1) to[out=180,in=180] (l2);
+%%continue stuff around coev
+\draw[overline] (j) to[out=0,in=180] (m4);
+\draw[overline] (m3) to[out=180,in=90] (m25) to[out=-90,in=180] (m2);
+\draw (W) to[out=0,in=180] (m1);
+%%stuff around second loop, ev
+\node[dotnode] (z) at (2.7,-0.2) {};
+\node at (2.55,-0.35) {\tiny $\zeta$};
+%anchors for second loop
+\node[emptynode] (ll1) at (2.9,-0.4) {};
+\node[emptynode] (ll2) at (2.9,0.4) {};
+\node[emptynode] (n1) at (2.8,-0.2) {};
+\node[emptynode] (n2) at (2.8,0.2) {};
+\node[emptynode] (p1) at (3.4,-0.2) {};
+\node[emptynode] (p2) at (3.4,0.2) {};
+\node[emptynode] (p3) at (3.2,0.6) {};
+\node[emptynode] (p4) at (3.2,1.0) {};
+\node[dotnode] (delta) at (3.6,0.8) {};
+\node at (3.75, 0.8) {\tiny $\delta$};
+%%second loop, underneath
+\draw (ll1) to[out=180,in=180] (ll2);
+%%continue stuff around second loop
+\draw (m1) -- (n1) -- (p1);
+\draw[overline] (m2) -- (n2);
+\draw (n2) -- (p2);
+\draw (m3) -- (p3);
+\draw (m4) -- (p4);
+%%the free loop, over
+\draw[overline] (l1) to[out=0,in=0] (l2);
+%%ev
+\draw (p3) to[out=0,in=-90] (delta) to[out=90,in=0] (p4);
+%%second loop, over
+\draw[overline] (ll1) to[out=0,in=0] (ll2);
+%%end j, I
+\node (I2) at (6,0.4) {$I_{j}$};
+\node at (5.5,0.4) {$\twoheadrightarrow$};
+\node (W2) at (5,0) {$W$};
+\node at (5,0.4) {$\otimes$};
+\node (j2) at (5,0.8) {$j$};
+\node at (6,1) {$\boxtimes$};
+\node (js2) at (6,1.6) {$j^*$};
+\draw (js) -- (js2);
+%%join to j,I
+\draw (p1) to[out=0,in=180] (W2);
+\draw (p2) to[out=0,in=180] (j2);
+%%other delta node
+\node[dotnode] at (4.1,0.52) {};
+\node at (4.2,0.4) {\tiny $\delta$};
+\end{tikzpicture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
